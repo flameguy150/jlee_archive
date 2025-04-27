@@ -10,6 +10,9 @@
             text-decoration: underline;
             color: black;        /* makes visited links same color */
         }
+        a:hover{
+            color:mediumblue;
+        }
         
         .underline{
             text-decoration: underline;
@@ -32,11 +35,18 @@
         footer {    
             text-align: center;
         }
+        .project-container {
+            gap: 40px;
+            flex-wrap: wrap; /*mobile stack*/
+        }
+        .descriptions{
+            font-size: 1rem;
+        }
     </style>
 </head>
 <body>
     <h1>
-        <pre><a href="./index.html">Justin Lee</a></pre>
+        <pre><a id="title" href="./index.html">Justin Lee</a></pre>
     </h1>
     <hr>
     <pre><header id="projects"><h1>Projects</h1>
@@ -45,7 +55,7 @@
                 <p class="descriptions">-My first project
 -Frameworks: Tkinter, NumPy, Pygame(for music)
 
-Features: 
+<strong>Features</strong>: 
 -Coordinate Plane and Plotting
 -Interactive 3D rotation
 -Custom 3D Object Creation
@@ -53,10 +63,10 @@ Features:
                 </p>
             <a href="https://github.com/flameguy150/sort_algo"><h2 class="underline">Sorting Algorithm Visualizer</h2></a>
                 <img src="./imgs/sort_1.png">  <img src="./imgs/sort_2.png">
-                <p>
+                <p class="descriptions">
 -Made in Pygame
 
-Features:
+<strong>Features</strong>:
 -Real-Time Sorting Animation
 -Randomized Shuffling
 -Multiple Algorithms Supported
@@ -65,12 +75,8 @@ Features:
            
         </div>
     </pre>
-    <hr>
-    <footer>
-        <pre>
-        <a id="email" href="https://github.com/flameguy150">Github</a> | <a id="linkedin" href="https://www.linkedin.com/in/justin-lee-14928b220/">LinkedIn</a>
-    </pre>
-    </footer>
+    <hr><footer><pre><a id="email" href="https://github.com/flameguy150"><strong>Github</strong></a> | <a id="linkedin" href="https://www.linkedin.com/in/justin-lee-14928b220/"><strong>LinkedIn</strong></a> | <a id="email" href="mailto:flameguy150@gmail.com"><strong>Email</strong></a>
+    </pre></footer>
 
 </body>
 

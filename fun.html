@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <title>jleesite2</title>
+    <style>
+        a,
+        a:visited {
+            text-decoration: underline;
+            color: black;
+            /* makes visited links same color */
+        }
+        a:hover{
+            color:mediumblue;
+        }
+
+        img{
+            width: 40%;
+            align-items: center;
+        }
+
+        p {
+            text-align: center;
+        }
+        .content {
+            display: flex; 
+            gap: 50px;/* Add some space between img and text */
+        }
+
+        .container-pages {
+            text-align: center;
+        }
+
+        h1, h2, h3{
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+        }
+        audio{
+            align-items: center;
+        }
+        .beat {
+          display: flex;
+          align-items: center;
+          gap: 20px; 
+          margin-bottom: 20px;
+        }
+
+        .beat span {
+          font-weight: bold;
+          min-width: 100px; 
+        }
+
+        .beat audio {
+          flex: 1; 
+        }
+
+        .corner-top,
+        .corner-bottom {
+          font-size: 2rem;
+          line-height: 1;
+        }
+
+        .desc{
+            font-size: .9rem;
+        }
+        span{
+            font-size: 1.1rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1><pre><a href="./index.html">Justin Lee</a></pre></h1><hr><pre><header id="about"><h1>Currently Working On..</h1>
+<div class="desc"><h2>Infinite Generating Terrain</h2>
+            <div class="content">
+                <img src="./imgs/terrain_1.png">
+                <p>
+Inspired by CodingTrain, I'm building an infinite terrain generator in <strong>Python</strong>,
+utilizing <strong>Perlin noise</strong> (for procedural randomness) and <strong>Tkinter</strong> (GUI).
+
+<strong>So far.. </strong>
+-I Made 30x20 field of rectangles split diagonally, creating two 1200 triangles to later simulate elevation.
+-By applying isometric projection, I was able to display the peaks and give the 2D terrain a 3D appearance.
+
+<strong>But I still need to..</strong>
+-Optimize the rendering to reduce GPU load.
+-Scale the camera to create the illusion of flying through infinite terrain.
+
+
+<!-- <pre><code class="language-python">
+def project_point(self, x, y, z):
+    cx = self.width / 2 - 50
+    cy = self.height / 2 - 100
+    scale_x = 0.5 # controls horizontal squish
+    scale_y = 0.25 # controls vertical squish
+    height_scale = 40 # how dramatic the peaks are
+
+    x_proj = cx + (x - y) * scale_x
+    y_proj = cy + (x + y) * scale_y - z * height_scale
+    return x_proj, y_proj
+</code></pre> -->
+                </p>
+            </div>
+
+
+
+
+
+<hr>
+<h2><u>Creative Works</u></h2>
+<div class="music-heading">
+  <div class="corner-top">                                  ┏</div>
+  <h3>Music: I like to make beats ♫꒰･‿･๑꒱</h3>
+  <div class="corner-bottom">                                                   ┛</div>
+</div>
+<div class="music-container">
+    <div class ="beat">
+    <span><strong>finalboss</strong></span> 
+    <audio controls autoplay>
+        <source src="./sounds/finalboss.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    </div>
+
+    <div class="beat">
+    <span><strong>smoke</strong></span>
+    <audio controls>
+        <source src="./sounds/smoke.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    </div>
+
+    <div class="beat">
+    <span><strong>yesterday</strong></span>
+    <audio controls>
+        <source src="./sounds/yesterday.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    </div></div>
+</div>
+        </header>
+    </pre>
+    <hr>
+    <footer>
+        <pre><a id="email" href="https://github.com/flameguy150"><strong>Github</strong></a> | <a id="linkedin" href="https://www.linkedin.com/in/justin-lee-14928b220/"><strong>LinkedIn</strong></a> | <a id="email" href="mailto:flameguy150@gmail.com"><strong>Email</strong></a>
+        </pre>
+    </footer>
+
+</body>
+
+
+
+
+
+</html>

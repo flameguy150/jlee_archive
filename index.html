@@ -10,9 +10,13 @@
             text-decoration: underline;
             color: black;        /* makes visited links same color */
         }
+        a:hover{
+            color:mediumblue;
+        }
         
         p{
             text-align: center;
+            margin-bottom: 20px;
         }
         .container-pages{
             text-align: center;
@@ -24,29 +28,91 @@
         footer{
             text-align: center;
         }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            border-radius: 6px;
+          
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; 
+            left: 50%;
+            transform: translateX(-50%);
+        
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
+<script>
+    const letters = "ABCDEFGHIJKLMNOPQESTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+{}[]/";
+    const targetText = "Justin Lee";
 
+    let interval = null;
+    let iteration = 0;
+
+    function startScramble() {
+        clearInterval(interval);
+
+        interval = setInterval(() => {
+            const scrambleDiv = document.getElementById("title_");
+            scrambleDiv.innerText = targetText
+                .split("")
+                .map((char, index) => {
+                    if (index < iteration) {
+                        return targetText[index];
+                    }
+                    return letters[Math.floor(Math.random() * letters.length)];
+                })
+                .join("");
+            if (iteration >= targetText.length) {
+                clearInterval(interval);
+            }
+            iteration += 1/2;
+        }, 50);
+    }
+    startScramble();
+</script>
 <body>
     
-    <h1><pre><a href="./index.html">Justin Lee</a></pre></h1>
-    <hr><pre><header id="about"><h1>About Me</h1><p class="desc">My name is Justin Lee.
-Currently, I am studying Economics and CS at UIUC.
+    <h1><pre><a id="title_" href="./index.html">Justin Lee</a></pre></h1>
+    <div class="about-container">
+    <hr>
+    <pre><header id="about"><h1>About Me</h1><p class="desc">My name is <strong>Justin Lee</strong>.
+Currently, I am studying <strong>Economics</strong> and <strong>CS</strong> at <strong>UIUC</strong>.
 
-This website was inspired by the no-JS club.
+This site serves as a digital portfolio highlighting my background and work.
+
+This website was inspired by the No-JS club.
 
 </p>
         </header>
         <div class="container-pages">
-        <a id="list">..</a>                                                           26-Apr-2025 03:19 -
-        <a id="list" href="./projects.html">Projects</a>                                                     26-Apr-2025 04:30 -
+        <div class="tooltip"><a id="list" href="./fun.html"><strong>..</strong></a><span class="tooltiptext">hm..</span></div>                                                         Last Updated: 26-Apr-2025 17:58 -
+        <a id="list" href="./projects.html"><strong>Projects</strong></a>                                                   Last Updated: 26-Apr-2025 04:30 -
         </div>
     </pre>
     
-
-    <hr><footer><pre>
-        <a id="email" href="https://github.com/flameguy150">Github</a> | <a id="linkedin" href="https://www.linkedin.com/in/justin-lee-14928b220/">LinkedIn</a>
-    </pre></footer>
+</div>
+    <hr><footer>
+        <pre><a id="email" href="https://github.com/flameguy150"><strong>Github</strong></a> | <a id="linkedin" href="https://www.linkedin.com/in/justin-lee-14928b220/"><strong>LinkedIn</strong></a> | <a id="email" href="mailto:flameguy150@gmail.com"><strong>Email</strong></a>
+        </pre>
+    </footer>
     
 </body>
 
