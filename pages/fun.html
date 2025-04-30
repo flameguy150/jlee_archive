@@ -31,6 +31,7 @@
             display: flex; 
             gap: 50px;/* Add some space between img and text */
             align-items: flex-start;
+            flex-wrap: wrap; /*mobile stack*/ 
         }
 
         .container-pages {
@@ -66,14 +67,12 @@
         }
 
         .corner-top {
-          margin-right: auto;
-          margin-right: 12em;
+          text-align: left;
           font-size: 2rem;
           line-height: 1;
         }
         .corner-bottom {
-          margin-left: auto;
-          margin-left: 11em;
+          text-align: right;
           font-size: 2rem;
           line-height: 1;
         }
@@ -95,7 +94,7 @@
     </style>
 </head>
 <body>
-    <h1 style="margin-top: 1em;"><a href="./index.html">Justin Lee</a></h1>
+    <h1 style="margin-top: 1em;"><a href="../index.html">Justin Lee</a></h1>
     <div style="margin-top: 2em;"></div>
     <hr>
     <header id="about"><h1 margin-top: 1em;>Currently Working On..</h1>
@@ -104,7 +103,7 @@
     <h2>Infinite Generating Terrain</h2>
 
     <div class="content">
-        <img src="./imgs/terrain_1.png">
+        <img src="../imgs/terrain_1.png">
 
     <div style="margin-top: 2em;">
     <p class="desc" style="margin-top: 2em;">Inspired by CodingTrain, I'm building an infinite terrain generator in <strong>&nbsp;Python</strong>,</p>
@@ -151,7 +150,7 @@ def project_point(self, x, y, z):
     <div class ="beat" style="margin-top: 3em;">
     <span><strong>finalboss</strong></span> 
     <audio controls autoplay>
-        <source src="./sounds/finalboss.mp3" type="audio/mpeg">
+        <source src="../sounds/finalboss.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     </div>
@@ -159,7 +158,7 @@ def project_point(self, x, y, z):
     <div class="beat" style="margin-top: 3em;">
     <span><strong>smoke</strong></span>
     <audio controls>
-        <source src="./sounds/smoke.mp3" type="audio/mpeg">
+        <source src="../sounds/smoke.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     </div>
@@ -167,7 +166,7 @@ def project_point(self, x, y, z):
     <div class="beat" style="margin-top: 3em;">
     <span><strong>yesterday</strong></span>
     <audio controls>
-        <source src="./sounds/yesterday.mp3" type="audio/mpeg">
+        <source src="../sounds/yesterday.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     </div></div>
