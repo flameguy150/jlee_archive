@@ -20,19 +20,23 @@
 
         img{
             width: 40%;
-            align-items: center;
+            margin-top: 2em;
+            margin-bottom: 7em;
         }
-
-        p {
-            text-align: center;
+        .desc{
+            font-size: 0.9rem;
         }
+        
         .content {
             display: flex; 
             gap: 50px;/* Add some space between img and text */
+            align-items: flex-start;
         }
 
         .container-pages {
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h1, h2, h3{
@@ -61,39 +65,59 @@
           flex: 1; 
         }
 
-        .corner-top,
+        .corner-top {
+          margin-right: auto;
+          margin-right: 12em;
+          font-size: 2rem;
+          line-height: 1;
+        }
         .corner-bottom {
+          margin-left: auto;
+          margin-left: 11em;
           font-size: 2rem;
           line-height: 1;
         }
 
-        .desc{
+        p.desc{
+            display: flex;
+            flex-wrap: wrap; /*mobile stack*/   
+            line-height: 1.3;
             font-size: .9rem;
-            flex-wrap: wrap; /*mobile stack*/
         }
         span{
             font-size: 1.1rem;
+        }
+
+        body{
+            font-family: monospace;
         }
         
     </style>
 </head>
 <body>
-    <h1><pre><a href="./index.html">Justin Lee</a></pre></h1><hr><pre><header id="about"><h1>Currently Working On..</h1>
-<div class="desc"><h2>Infinite Generating Terrain</h2>
-            <div class="content">
-                <img src="./imgs/terrain_1.png">
-                <p>
-Inspired by CodingTrain, I'm building an infinite terrain generator in <strong>Python</strong>,
-utilizing <strong>Perlin noise</strong> (for procedural randomness) and <strong>Tkinter</strong> (GUI).
+    <h1 style="margin-top: 1em;"><a href="./index.html">Justin Lee</a></h1>
+    <div style="margin-top: 2em;"></div>
+    <hr>
+    <header id="about"><h1 margin-top: 1em;>Currently Working On..</h1>
 
-<strong>So far.. </strong>
--I Made 30x20 field of rectangles split diagonally, creating two 1200 triangles to later simulate elevation.
--By applying isometric projection, I was able to display the peaks and give the 2D terrain a 3D appearance.
+<div class="cw-container desc" style="margin-top: 3em;">
+    <h2>Infinite Generating Terrain</h2>
 
-<strong>But I still need to..</strong>
--Optimize the rendering to reduce GPU load.
--Scale the camera to create the illusion of flying through infinite terrain.
+    <div class="content">
+        <img src="./imgs/terrain_1.png">
 
+    <div style="margin-top: 2em;">
+    <p class="desc" style="margin-top: 2em;">Inspired by CodingTrain, I'm building an infinite terrain generator in <strong>&nbsp;Python</strong>,</p>
+    <p class="desc">utilizing <strong>&nbsp;Perlin noise&nbsp;</strong> (for procedural randomness) and <strong>&nbsp;Tkinter&nbsp;</strong> (GUI).</p>
+
+    <p class="desc" style="margin-top: 2em;"><strong>So far.. </strong></p>
+    <p class="desc">-I Made 30x20 field of rectangles split diagonally, creating 1200 triangles to later simulate elevation.</p>
+    <p class="desc">-By applying <strong>&nbsp;isometric projection</strong>, I was able to display the peaks and give the 2D terrain a 3D appearance.</p>
+
+    <p class="desc" style="margin-top: 2em;"><strong>But I still need to..</strong></p>
+    <p class="desc">-Optimize the rendering to reduce GPU load.</p>
+    <p class="desc">-<strong>Scale the camera&nbsp;</strong> to create the illusion of flying through infinite terrain.</p>
+    </div>
 
 <!-- <pre><code class="language-python">
 def project_point(self, x, y, z):
@@ -107,22 +131,24 @@ def project_point(self, x, y, z):
     y_proj = cy + (x + y) * scale_y - z * height_scale
     return x_proj, y_proj
 </code></pre> -->
-                </p>
-            </div>
+    
+</div>
 
 
 
 
 
 <hr>
-<h2><u>Creative Works</u></h2>
-<div class="music-heading">
-  <div class="corner-top">                                  ┏</div>
+<h2 style="margin-top: 2em;"><u>Creative Works</u></h2>
+
+<div class="music-heading" style="margin-top: 2em; text-align: center;"> 
+  <div class="corner-top">┏</div>
   <h3>Music: I like to make beats ♫꒰･‿･๑꒱</h3>
-  <div class="corner-bottom">                                                   ┛</div>
+  <div class="corner-bottom">┛</div>
 </div>
+
 <div class="music-container">
-    <div class ="beat">
+    <div class ="beat" style="margin-top: 3em;">
     <span><strong>finalboss</strong></span> 
     <audio controls autoplay>
         <source src="./sounds/finalboss.mp3" type="audio/mpeg">
@@ -130,7 +156,7 @@ def project_point(self, x, y, z):
     </audio>
     </div>
 
-    <div class="beat">
+    <div class="beat" style="margin-top: 3em;">
     <span><strong>smoke</strong></span>
     <audio controls>
         <source src="./sounds/smoke.mp3" type="audio/mpeg">
@@ -138,7 +164,7 @@ def project_point(self, x, y, z):
     </audio>
     </div>
 
-    <div class="beat">
+    <div class="beat" style="margin-top: 3em;">
     <span><strong>yesterday</strong></span>
     <audio controls>
         <source src="./sounds/yesterday.mp3" type="audio/mpeg">
@@ -147,11 +173,9 @@ def project_point(self, x, y, z):
     </div></div>
 </div>
         </header>
-    </pre>
     <hr>
     <footer>
-        <pre><a id="email" href="https://github.com/flameguy150"><strong>Github</strong></a> | <a id="linkedin" href="https://www.linkedin.com/in/justin-lee-14928b220/"><strong>LinkedIn</strong></a> | <a id="email" href="mailto:flameguy150@gmail.com"><strong>Email</strong></a>
-        </pre>
+        <a id="email" href="https://github.com/flameguy150"><strong>Github</strong></a> | <a id="linkedin" href="https://www.linkedin.com/in/justin-lee-14928b220/"><strong>LinkedIn</strong></a> | <a id="email" href="mailto:flameguy150@gmail.com"><strong>Email</strong></a>
     </footer>
 
 </body>

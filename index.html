@@ -18,8 +18,15 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        p.desc{
+            margin: 0;
+            line-height: 1.3;
+        }
         .container-pages{
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap; /*mobile stack*/
         }
         h1 {
             text-align: center;
@@ -58,9 +65,16 @@
             opacity: 1;
         }
         body{
-            gap: 40px;
-            flex-wrap: wrap; /*mobile stack*/
+            font-family: monospace;
         }
+        .page-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 39%; /* full width of container */
+            /*max-width: 500px; /* optional: control max width */ 
+        }
+        
     </style>
 </head>
 <script>
@@ -93,29 +107,43 @@
     startScramble();
 </script>
 <body>
-    
-    <h1><pre><a id="title_" href="./index.html">Justin Lee</a></pre></h1>
-    <div class="about-container">
+    <div style="margin-top: 2em;"></div>
+    <h1><a id="title_" href="./index.html">Justin Lee</a></h1>
+    <div class="about-container" style="margin-top: 2em;">
     <hr>
-    <pre><header id="about"><h1>About Me</h1><p class="desc">My name is <strong>Justin Lee</strong>.
-Currently, I am studying <strong>Economics</strong> and <strong>CS</strong> at <strong>UIUC</strong>.
+    <header id="about"><h1>About Me</h1>
+<div>
+<p class="desc">My name is <strong>Justin Lee</strong>.</p>
+<p class="desc">Currently, I am studying <strong>Economics</strong> and <strong>CS</strong> at <strong>UIUC</strong>.</p>
 
-This site serves as a digital portfolio highlighting my background and work.
-
-This website was inspired by the No-JS club.
+<p class="desc"  style="margin-top: 1em;">This site serves as a digital portfolio highlighting my background and work.</p>
+<p class="desc"  style="margin-top: 1em;">This website was inspired by the No-JS club.</p>
 
 </p>
+</div>
         </header>
         <div class="container-pages">
-        <div class="tooltip"><a id="list" href="./fun.html"><strong>..</strong></a><span class="tooltiptext">hm..</span></div>                                                         Last Updated: 26-Apr-2025 17:58 -
-        <a id="list" href="./projects.html"><strong>Projects</strong></a>                                                   Last Updated: 26-Apr-2025 04:30 -
+            <div style="margin-top: 6em;"></div>
+            <div class="page-item">
+                <div class="tooltip">
+                    <a id="list" href="./fun.html"><strong>..</strong></a>
+                    <span class="tooltiptext">hm..</span>
+                </div>
+                <span class="last-updated">Last Updated: 26-Apr-2025 17:58 -</span>
+            </div>
+        
+            <div class="page-item">
+                <a id="list" href="./projects.html"><strong>Projects</strong></a>
+                <span class="last-updated">Last Updated: 26-Apr-2025 04:30 -</span>
+            </div>
+            <div style="margin-top: 3em;"></div>
         </div>
-    </pre>
+    
     
 </div>
     <hr><footer>
-        <pre><a id="email" href="https://github.com/flameguy150"><strong>Github</strong></a> | <a id="linkedin" href="https://www.linkedin.com/in/justin-lee-14928b220/"><strong>LinkedIn</strong></a> | <a id="email" href="mailto:flameguy150@gmail.com"><strong>Email</strong></a>
-        </pre>
+        <a id="email" href="https://github.com/flameguy150"><strong>Github</strong></a> | <a id="linkedin" href="https://www.linkedin.com/in/justin-lee-14928b220/"><strong>LinkedIn</strong></a> | <a id="email" href="mailto:flameguy150@gmail.com"><strong>Email</strong></a>
+        
     </footer>
     
 </body>
