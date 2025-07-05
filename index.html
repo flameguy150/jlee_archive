@@ -8,6 +8,12 @@
     <link rel="icon" type="image/x-icon" href="icon/sin.ico">
     <title>jleesite2</title>
     <style>
+        @font-face {
+          font-family: 'FSEX300';
+          src: url('fonts/FSEX300.ttf') format('truetype');
+        }
+
+
         a, a:visited {
             text-decoration: underline;
             color: white;        /* makes visited links same color */
@@ -70,7 +76,7 @@
         }
         body{
             background-color: rgb(0, 0, 0);
-            font-family: monospace;
+            font-family: 'FSEX300', monospace;
         }
         .page-item {
             display: flex;
@@ -114,6 +120,7 @@
     }
     startScramble();
 </script>
+
 <body>
     <div style="margin-top: 2em;"></div>
     <h1><a id="title_" href="./index.html">Justin Lee</a></h1>
@@ -135,8 +142,8 @@
             <div style="margin-top: 6em;"></div>
             <div class="page-item">
                 <div class="tooltip">
-                    <a id="list" href="pages/dot2.html"><strong>..</strong></a>
-                    <span class="tooltiptext">모지</span>
+                    <a id="list" href="pages/about.html"><strong>..</strong></a>
+                    <span class="tooltiptext">..</span>
                 </div>
                 <span class="last-updated">Last Updated: 04-Jul-2025 18:08 -</span>
             </div>
@@ -156,6 +163,28 @@
         
     </footer>
     
+<script>
+  const tooltip = document.querySelector(".tooltip");
+  const tooltipText = tooltip.querySelector(".tooltiptext");
+
+  const dotFrames = ["...", "..", ".", " ", ".", "..", "$loading"];
+  let dotFrameIndex = 0;
+  let tooltipInterval = null;
+
+  tooltip.addEventListener("mouseenter", () => {
+    tooltipInterval = setInterval(() => {
+      tooltipText.textContent = dotFrames[dotFrameIndex];
+      dotFrameIndex = (dotFrameIndex + 1) % dotFrames.length;
+    }, 200);
+  });
+
+  tooltip.addEventListener("mouseleave", () => {
+    clearInterval(tooltipInterval);
+    tooltipText.textContent = ".."; // Reset tooltip text
+    dotFrameIndex = 0;
+  });
+</script>
+
 </body>
 
 
