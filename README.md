@@ -1,6 +1,6 @@
 # Justin Lee - Personal Website
 
-Welcome to my personal website hosted @ https://flameguy150.github.io/jleesite2.
+Welcome to my personal website hosted @ https://flameguy150.github.io/jlee_archive/.
 
 This site serves as a digital portfolio highlighting my background and work.
 
