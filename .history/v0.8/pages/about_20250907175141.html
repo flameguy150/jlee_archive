@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>JLEE ARCHIVE</title>
+    <style>
+        @font-face {
+          font-family: 'FSEX300';
+          src: url('../../fonts/FSEX300.ttf') format('truetype');
+        }
+
+        @font-face {
+          font-family: 'skor';
+          src: url('../../fonts/소야바른9-babosorry.ttf') format('truetype');
+        }
+        a, a:visited {
+            text-decoration: underline;
+            color: white;        /* makes visited links same color */
+        }
+
+        a:hover{
+            color:aquamarine;
+        }
+        
+        .container-pages{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap; /*mobile stack*/
+        }
+
+        h1 {
+            color:aliceblue;
+            text-align: center;
+            font-size: 50px;
+        }
+       
+        footer{
+            text-align: center;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        p {
+            font-family: 'FSEX300', monospace;
+            color: white;
+            font-size: 30px;
+        }
+
+        body{
+            background-color: rgb(0, 0, 0);
+            font-family: 'FSEX300', monospace;
+        }
+        
+        .page-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 39%; /* full width of container */
+            /*max-width: 500px; /* optional: control max width */ 
+        }
+
+        .korean-text {
+            font-family: 'skor', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-pages">
+        <h1><a href="../index.html">Home</a></h1>
+        <!-- <a href="logs/log_index.html">logs</a> -->
+        <a href="reads/read.html">reads</a>
+        <!-- <a href="music/music.html">music</a> -->
+        <a href="setup/setup.html">setup</a>
+        <a href="goals/goal.html">goals</a>
+    </div>
+    <!-- <hr> -->
+    <!-- <footer>
+        <a id="email" href="https://github.com/flameguy150"><strong>Github</strong></a> | <a id="linkedin" href="https://www.linkedin.com/in/justin-lee-14928b220/"><strong>LinkedIn</strong></a> | <a id="email" href="mailto:flameguy150@gmail.com"><strong>Email</strong></a>
+        
+    </footer> -->
+</body>
+</html>

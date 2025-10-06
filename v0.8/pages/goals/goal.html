@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>JLEE ARCHIVE</title>
+    <style>
+        @font-face {
+          font-family: 'FSEX300';
+          src: url('../../../fonts/FSEX300.ttf') format('truetype');
+        }
+
+        @font-face {
+          font-family: 'skor';
+          src: url('../../../fonts/소야바른9-babosorry.ttf') format('truetype');
+        }
+        a, a:visited {
+            text-decoration: underline;
+            color: white;        /* makes visited links same color */
+        }
+
+        a:hover{
+            color:aquamarine;
+        }
+        
+        .container-pages{
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            flex-wrap: wrap; /*mobile stack*/
+        }
+
+        h1 {
+            color:aliceblue;
+            text-align: center;
+        }
+       
+        footer{
+            text-align: center;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        p {
+            font-family: 'FSEX300', monospace;
+            color: white;
+            font-size: 26px;
+        }
+
+        body{
+            background-color: rgb(0, 0, 0);
+            font-family: 'FSEX300', monospace;
+        }
+        
+        .page-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 39%; /* full width of container */
+            /*max-width: 500px; /* optional: control max width */ 
+        }
+
+        .korean-text {
+            font-family: 'skor', monospace;
+        }
+
+        h2 {
+            color: aliceblue;
+        }
+        img {
+            max-width: 40%;
+            max-height: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a id="title_" href="../../index.html">Go Home</a></h1>
+    <div class="container-pages">
+        <!-- <h1>Personal:</h1> -->
+        <p>Make my family proud. Buy them whatever they want. Meet all kinds of people and travel the world.</p>
+        <p>Still searching for what I want to do. Through music and code I found the joy of creation. Through the army I found the joy of working with others. </p>
+        <p>I want to make something meaningful.</p>
+        <p class="korean-text">나는 위대한 사람이 되고 싶어.</p>
+        <img src="../../../imgs/luffy_bw.jpg">
+    </div>
+</body>
+</html>

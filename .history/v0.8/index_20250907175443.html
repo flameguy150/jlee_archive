@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <!-- For a favicon.ico in the root folder -->
+    <link rel="icon" type="image/x-icon" href="../icon/sin.ico">
+    <title>JLEE ARCHIVE</title>
+    <style>
+        @font-face {
+          font-family: 'FSEX300';
+          src: url('../fonts/FSEX300.ttf') format('truetype');
+        }
+
+
+        a, a:visited {
+            text-decoration: underline;
+            color: white;        /* makes visited links same color */
+        }
+        a:hover{
+            color:rgb(4, 41, 29);
+        }
+        
+        p{
+            color:rgb(250, 250, 250);
+            text-align: center;
+            /* margin-bottom: 20px; */
+            font-size: 20px;
+        }
+        p.desc{
+            margin: 0;
+            line-height: 1.3;
+        }
+        .container-pages{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap; /*mobile stack*/
+        }
+        h1 {
+            color:rgb(26, 40, 53);
+            text-align: center;
+        }
+       
+        footer{
+            text-align: center;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: rgb(255, 248, 240);
+            color: #750e0e;
+            text-align: center;
+            padding: 5px;
+            border-radius: 6px;
+          
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; 
+            left: 50%;
+            transform: translateX(-50%);
+        
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        body{
+            background-color: rgb(0, 0, 0);
+            font-family: 'FSEX300', monospace;
+        }
+        .page-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 39%; /* full width of container */
+            /*max-width: 500px; /* optional: control max width */ 
+        }
+        span,last-updated {
+            color:rgb(179, 13, 7);
+        }
+        .marquee {
+            /* position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: black; /* or transparent, but best to add bg so text is visible */
+            /* z-index: 9999; /* very high so it stays on top */
+            /*b padding: 0.5em 0; /* some vertical spacing */
+            /* box-sizing: border-box; */
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 14s linear infinite;
+        }
+
+        @keyframes marquee {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        /* Background video */
+        .video-background {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1; /* pushes behind text */
+          overflow: hidden;
+        }
+
+        .video-background video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* fills screen without distortion */
+        }
+    </style>
+</head>
+<script>
+    const letters = "ABCDEFGHIJKLMNOPQESTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+{}[]/";
+    const targetText = "Justin Lee";
+
+    let interval = null;
+    let iteration = 0;
+
+    function startScramble() {
+        clearInterval(interval);
+
+        interval = setInterval(() => {
+            const scrambleDiv = document.getElementById("title_");
+            scrambleDiv.innerText = targetText
+                .split("")
+                .map((char, index) => {
+                    if (index < iteration) {
+                        return targetText[index];
+                    }
+                    return letters[Math.floor(Math.random() * letters.length)];
+                })
+                .join("");
+            if (iteration >= targetText.length) {
+                clearInterval(interval);
+            }
+            iteration += 1/2;
+        }, 50);
+    }
+    startScramble();
+</script>
+
+<body>
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="../vids/0821_transition.mp4" type="video/mp4">
+            <!-- You can add more <source> tags for different video formats for wider browser       compatibility -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="marquee">
+        <span>© jlee archive — stay tuned for updates and announcements!</span>
+    </div>
+    <div style="margin-top: 2em;"></div>
+    <h1><a id="title_" href="./index.html">Justin Lee</a></h1>
+    <div class="about-container" style="margin-top: 2em;">
+    <!-- <hr> -->
+    <!-- <header id="about"><h1>About Me</h1> -->
+<div>
+<!-- <p class="desc">My name is <strong>Justin Lee</strong>.</p> -->
+<p class="desc">Studying <strong>Economics</strong> and <strong>CS</strong> at <strong>UIUC</strong>.</p>
+
+<!-- <p class="desc"  style="margin-top: 1em;">This site serves as a digital portfolio highlighting my background and work.</p>
+<p class="desc"  style="margin-top: 1em;">This website was inspired by the No-JS club.</p> -->
+
+
+</p>
+</div>
+        </header>
+        <div class="container-pages">
+            <div style="margin-top: 6em;"></div>
+            <div class="page-item">
+                <div class="tooltip">
+                    <a id="list" href="pages/about.html"><strong>..</strong></a>
+                    <span class="tooltiptext">..</span>
+                </div>
+                <p>Last Updated: 12-Aug-2025 18:40 -</p>
+                <!-- <span class="last-updated">Last Updated: 04-Jul-2025 18:08 -</span> -->
+            </div>
+            <div class="page-item">
+                <a id="list"><strong>Projects</strong></a>
+                <p>Last Updated: 26-Apr-2025 04:30 -</p>
+                <!-- <span class="last-updated">Last Updated: 26-Apr-2025 04:30 -</span> -->
+            </div>
+            <div style="margin-top: 3em;"></div>
+        </div>
+    
+    
+</div>
+
+    <!-- <hr> -->
+    <footer>
+        <a id="email" href="https://github.com/flameguy150"><strong>Github</strong></a> | <a id="linkedin" href="https://www.linkedin.com/in/justin-lee-14928b220/"><strong>LinkedIn</strong></a> | <a id="email" href="mailto:flameguy150@gmail.com"><strong>Email</strong></a>
+        
+    </footer>
+    
+<script>
+  const tooltip = document.querySelector(".tooltip");
+  const tooltipText = tooltip.querySelector(".tooltiptext");
+
+  const dotFrames = ["...", "..", ".", " ", ".", "..", "$loading"];
+  let dotFrameIndex = 0;
+  let tooltipInterval = null;
+
+  tooltip.addEventListener("mouseenter", () => {
+    tooltipInterval = setInterval(() => {
+      tooltipText.textContent = dotFrames[dotFrameIndex];
+      dotFrameIndex = (dotFrameIndex + 1) % dotFrames.length;
+    }, 200);
+  });
+
+  tooltip.addEventListener("mouseleave", () => {
+    clearInterval(tooltipInterval);
+    tooltipText.textContent = ".."; // Reset tooltip text
+    dotFrameIndex = 0;
+  });
+</script>
+
+</body>
+
+
+
+
+
+</html>
