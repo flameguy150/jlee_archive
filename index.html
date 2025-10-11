@@ -4,40 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- For a favicon.ico in the root folder -->
-    <link rel="icon" type="image/x-icon" href="icon/sin.ico">
-    <title>junabes</title>
+    <link rel="icon" type="image/x-icon" href="icon/wind.ico">
+    <title>jlee</title>
     <style>
         @font-face {
-            font-family: 'JetBrainsMonoNerdFont-Light';
+            font-family: 'JetBrainsMono';
             src: url('fonts/JetBrainsMonoNerdFont-Light.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'bahn';
+            src: url('fonts/BAHNSCHRIFT.ttf') format('truetype');
         }
         
         body {
-            font-family: 'FSEX300', sans-serif;
+            font-family: 'JetBrainsMono';
         }
         
         h1 {
-            font-family: 'FSEX300', sans-serif;
+            padding: 1.5rem;
+            font-family: 'JetBrainsMono';
+            font-size: 25px;
+            text-align: center;
         }
         
-        .navigation {
-            font-family: 'FSEX300', sans-serif;
+        .opening {
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: center; /* centers horizontally */
+            gap: 2.5rem;             /* spacing between links */
+            /*background-color: #111; */
+            padding: 2rem;
+            text-align: center;
+        }
+        .navbar a {
+            color: rgb(20, 2, 2);
+            text-decoration: none;
+            font-family: 'JetBrainsMono', sans-serif;
+            font-size: 19px;
+        }
+        .oldlink {
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div>
-        <navbar class="navigation">
-            <a href="index.html" class="nav-btn">Home</a>
-            <a href="/pages_1.0/about.html" class="nav-btn">About</a>
-            <a href="/pages_1.0/contact.html" class="nav-btn">Contact</a>
-        </navbar>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="pages_1.0/about.html">About</a>
+            <a href="pages_1.0/contact.html">Contact</a>
+        </nav>
         <div class="content">
-            <h1>My name is Justin Lee</h1>
+            <br>
+            <br>
+            <h1>Justin Lee</h1>
         </div>
     </div>
-    hello, this will be the new main page 
+    <p class="opening">hello, this will be the new main page
+    This website serves as a legacy for Justin Lee</p>
     <br>
-    <a href="./v0.8/index.html">old page</a>
+    <p class="oldlink"><a href="./v0.8/index.html">old page</a></p>
 </body>
 </html>

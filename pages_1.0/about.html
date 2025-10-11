@@ -5,42 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- For a favicon.ico in the root folder -->
-    <link rel="icon" type="image/x-icon" href="icon/sin.ico">
-    <title>junabes</title>
+    <link rel="icon" type="image/x-icon" href="icon/wind.ico">
+    <title>jlee</title>
     <style>
         @font-face {
-            font-family: 'JetBrainsMonoNerdFont-Light';
-            src: url('fonts/JetBrainsMonoNerdFont-Light.ttf') format('truetype');
+            font-family: 'JetBrainsMono';
+            src: url('../fonts/JetBrainsMonoNerdFont-Light.ttf') format('truetype');
         }
-
+        
         body {
-            font-family: 'FSEX300', sans-serif;
+            font-family: 'JetBrainsMono';
         }
-
+        
         h1 {
-            font-family: 'FSEX300', sans-serif;
+            font-family: 'JetBrainsMono';
         }
-
-        .navigation {
-            font-family: 'FSEX300', sans-serif;
+        
+        .navbar {
+            display: flex;
+            justify-content: center; /* centers horizontally */
+            gap: 2.5rem;             /* spacing between links */
+            /*background-color: #111; */
+            padding: 2rem;
+            text-align: center;
+        }
+        .navbar a {
+            color: rgb(20, 2, 2);
+            text-decoration: none;
+            font-family: 'JetBrainsMono', sans-serif;
+            font-size: 19px;
         }
     </style>
 </head>
 
 <body>
     <div>
-        <navbar class="navigation">
-            <a href="../index.html" class="nav-btn">Home</a>
-            <a href="about.html" class="nav-btn">About</a>
-            <a href="contact.html" class="nav-btn">Contact</a>
-        </navbar>
+        <nav class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
         <div class="content">
             <h1>About me</h1>
         </div>
     </div>
-    hello, this will be the new main page
+    <p>hello, this will be the new about page</p>
     <br>
-    <a href="./v0.8/index.html">old page</a>
 </body>
 
 </html>
