@@ -14,3 +14,4 @@ Connect with me on [LinkedIn](https://www.linkedin.com/in/justin-lee-14928b220/)
 
 ![image](https://github.com/user-attachments/assets/57a70a8a-81d1-4d95-8d4a-650704d67331)
 ![image2](./imgs/screenshot_bw.png)
+![image3](<Image 8-21-25 at 1.19 AM.jpg>)
