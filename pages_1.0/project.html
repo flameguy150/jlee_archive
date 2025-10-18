@@ -16,7 +16,8 @@
         body {
             font-family: 'JetBrainsMono';
             text-align: center;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
         }
     
         h1 {
@@ -55,6 +56,14 @@
             object-fit: cover; /* keep proportions */
         }
 
+        .ascii-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 2.5rem;
+          padding: 2rem 1rem 4rem;
+        }
+
         /* Cat styling */
         .cat {
           font-family: monospace;
@@ -63,6 +72,8 @@
           display: inline-block;
           animation: spin3D 6s linear infinite;
           transform-style: preserve-3d;
+          text-align: left;
+          margin: 0;
         }
 
         /* 3D rotation keyframes */
@@ -87,11 +98,11 @@
         .stage {
           perspective: 800px;
           display: inline-block;
+          margin: 0 auto;
         }
 
         /* ASCII cube */
         .cube {
-          position: absolute;
           font-family: monospace;
           white-space: pre;
           line-height: 1.05;        /* keeps the cube tight */
@@ -100,7 +111,7 @@
           transform-style: preserve-3d;
           animation: cubeSpin 7s ease-in-out infinite alternate;
           user-select: none;
-          right: 440px;
+          font-size: 18px;
         }
 
         /* Smooth 3D spin in place */
@@ -108,6 +119,11 @@
           0%   { transform: rotateX(0deg)   rotateY(0deg); }
           50%  { transform: rotateX(20deg)  rotateY(180deg); }
           100% { transform: rotateX(360deg) rotateY(360deg); }
+        }
+
+        @media (max-width: 600px) {
+          .cat { font-size: 16px; }
+          .cube { font-size: 16px; }
         }
 
     </style>
@@ -124,18 +140,18 @@
             <br>
             <br>
             <h1>Projects</h1>
-            <p>under construction.</p>>
+            <p>under construction.</p>
         </div>
     </div>
-    <br>
-    <pre class="cat" aria-label="running cat" style="margin:0;">                                                                                          
-        ╱|、
-          (˚ˎ 。7  
-                 |、˜〵          
-          じしˍ,)ノ
-        </pre>
-    <div class="stage">
-        <pre class="cube" aria-label="3D ASCII cube">
+    <div class="ascii-wrapper">
+        <span class="cat" aria-label="running cat">
+╱|、
+(˚ˎ 。7
+|、˜〵
+じしˍ,)ノ
+        </span>
+        <div class="stage">
+            <span class="cube" aria-label="3D ASCII cube">
        +--------+
       /        /|
      /        / |
@@ -145,7 +161,8 @@
     |        | /
     |        |/
     +--------+
-        </pre>
+            </span>
+        </div>
     </div>
 </body>
 
